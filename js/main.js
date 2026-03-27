@@ -41,43 +41,48 @@ $(document).ready(function () {
     $(".mobile-menu").toggleClass("active");
   });
 
-  $(".contacts__form").submit(function (event) {
+  $('.contacts__form').on('submit', function (event) {
     event.preventDefault();
 
-    $(".contacts__wrap").removeClass("error");
-    $(".contacts__error").hide();
+    const form = $(this);
+    const nameField = $('#name');
+    const emailField = $('#email');
+    const city = $('#city').val();
 
     let isValid = true;
 
-    const name = $("#name").val().trim();
-    if (name.length < 2) {
-      isValid = false;
-      $("#name").closest(".contacts__wrap").addClass("error");
-      $(".js-error-name").show();
+    $('.contacts__error').hide();
+
+    if (nameField.length) {
+      const name = $.trim(nameField.val());
+      if (!name || name.length < 2) {
+        $('.js-error-name').show();
+        isValid = false;
+      }
     }
 
-    const email = $("#email").val().trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      isValid = false;
-      $("#email").closest(".contacts__wrap").addClass("error");
-      $(".js-error-email").show();
+    if (emailField.length) {
+      const email = $.trim(emailField.val());
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!email || !emailPattern.test(email)) {
+        $('.js-error-email').show();
+        isValid = false;
+      }
     }
 
-    const city = $("#city").val();
-    if (!city) {
+    if (!city || city === '-1') {
+      $('.js-error-city').show();
       isValid = false;
-      $("#city").closest(".contacts__wrap").addClass("error");
-      $(".js-error-city").show();
     }
 
-    if (isValid) {
-      var form = $(this);
-      var formData = form.serialize()
-      var baseurl = 'https://happycurls.as.me/'
-      var redirectUrl = baseurl + city + '?' + formData
-      window.location.href = redirectUrl
-    }
+    if (!isValid) return;
+
+    const formData = form.serialize();
+    const baseurl = 'https://happycurls.as.me/';
+    const redirectUrl = `${baseurl}${city}${formData ? '?' + formData : ''}`;
+
+    window.location.href = redirectUrl;
   });
 
   
