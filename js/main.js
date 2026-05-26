@@ -18,7 +18,17 @@ $(document).ready(function () {
     $(".js-open-menu").removeClass("active");
     $("body").removeClass("b-hidden");
     $(".mobile-menu").removeClass("active");
+    $(".mobile-menu .header__submenu").removeClass("is-open");
   }
+
+  $(".mobile-menu .header__submenu-arrow, .mobile-menu .no-link .header__submenu-toggle").on("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      $(this)
+          .closest(".header__submenu")
+          .toggleClass("is-open");
+  });
 
   $(".js-anchor").click(function (e) {
     e.preventDefault();
