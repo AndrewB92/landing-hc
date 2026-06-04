@@ -36,67 +36,165 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" />
 
     <script type="application/ld+json">
-{
+    {
       "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": "https://happycurls.pl/uslugi/#webpage",
-      "url": "https://happycurls.pl/uslugi/",
-      "name": "Usługi fryzjerskie dla włosów kręconych i falowanych HappyCurls",
-      "description": "Kompleksowa oferta dla Twoich loków w HappyCurls. Strzyżenie na sucho, profesjonalna pielęgnacja i bezpieczna koloryzacja włosów kręconych. Sprawdź nasze usługi.",
-      "isPartOf": {
-            "@type": "WebSite",
-            "@id": "https://happycurls.pl/#website",
-            "name": "HappyCurls",
-            "url": "https://happycurls.pl/"
-      },
-      "about": {
-            "@type": "HairSalon",
-            "@id": "https://happycurls.pl/#business",
-            "name": "HappyCurls"
-      },
-      "mainEntity": {
-            "@type": "OfferCatalog",
-            "name": "Usługi fryzjerskie HappyCurls",
-            "itemListElement": [
-                  {
-                        "@type": "Offer",
-                        "url": "https://happycurls.pl/uslugi/strzyzenie-na-sucho/",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "Architektura cięcia na sucho",
-                              "description": "Autorska metoda strzyżenia loków bez użycia wody pozwalająca na pełną kontrolę kształtu i objętości fryzury."
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "url": "https://happycurls.pl/uslugi/pielegnacja-i-stylizacja/",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "Rytuały pielęgnacyjne i regeneracja",
-                              "description": "Ekspercka usługa łącząca głęboką regenerację z konsultacją i nauką domowej rutyny."
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "url": "https://happycurls.pl/uslugi/kompleks-meski/",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "Męski kompleks dla włosów kręconych",
-                              "description": "Specjalistyczne strzyżenie uwzględniające męską estetykę oraz unikalne rysy twarzy i kształt czaszki."
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "url": "https://happycurls.pl/uslugi/fryzjer-dzieciecy-7-12-lat/",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "Strzyżenie i pielęgnacja loków dziecięcych",
-                              "description": "Bezstresowe cięcie architekturalne i instruktaż dla rodziców."
-                        }
-                  }
-            ]
-      }
-}
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://happycurls.pl/uslugi/#webpage",
+          "url": "https://happycurls.pl/uslugi/",
+          "name": "Usługi fryzjerskie dla włosów kręconych i falowanych HappyCurls",
+          "description": "Kompleksowa oferta dla Twoich loków w HappyCurls. Strzyżenie na sucho, profesjonalna pielęgnacja i bezpieczna koloryzacja włosów kręconych. Sprawdź nasze usługi.",
+          "isPartOf": {
+            "@id": "https://happycurls.pl/#website"
+          },
+          "about": {
+            "@id": "https://happycurls.pl/#business"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://happycurls.pl/images/uslugi/faces.webp"
+          },
+          "keywords": [
+            "strzyżenie włosów kręconych",
+            "strzyżenie na sucho",
+            "pielęgnacja włosów kręconych",
+            "stylizacja loków",
+            "fryzjer do włosów kręconych",
+            "włosy falowane",
+            "kręcone włosy",
+            "afroloki"
+          ],
+          "mainEntity": {
+            "@id": "https://happycurls.pl/uslugi/#offer-catalog"
+          },
+          "potentialAction": {
+            "@type": "ReserveAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://happycurls.pl/uslugi/#form"
+            },
+            "result": {
+              "@type": "Reservation",
+              "name": "Zarezerwuj termin w HappyCurls"
+            }
+          },
+          "inLanguage": "pl-PL"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://happycurls.pl/#website",
+          "name": "HappyCurls",
+          "url": "https://happycurls.pl/",
+          "publisher": {
+            "@id": "https://happycurls.pl/#business"
+          },
+          "inLanguage": "pl-PL"
+        },
+        {
+          "@type": "HairSalon",
+          "@id": "https://happycurls.pl/#business",
+          "name": "HappyCurls",
+          "url": "https://happycurls.pl/",
+          "logo": "https://happycurls.pl/images/logo.svg",
+          "image": "https://happycurls.pl/images/h1.jpg",
+          "telephone": "+48690401977",
+          "email": "happycurls.polska@gmail.com",
+          "priceRange": "$$",
+          "description": "HappyCurls to specjalistyczna sieć salonów fryzjerskich w Polsce dla włosów kręconych, falowanych i afroloków.",
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Warszawa"
+            },
+            {
+              "@type": "City",
+              "name": "Poznań"
+            },
+            {
+              "@type": "City",
+              "name": "Wrocław"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/happycurls.polska/",
+            "https://www.instagram.com/happycurls_polska/",
+            "https://www.tiktok.com/@happycurls_polska/"
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "@id": "https://happycurls.pl/uslugi/#offer-catalog",
+          "name": "Usługi fryzjerskie HappyCurls",
+          "url": "https://happycurls.pl/uslugi/",
+          "provider": {
+            "@id": "https://happycurls.pl/#business"
+          },
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "url": "https://happycurls.pl/uslugi/strzyzenie-na-sucho/",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://happycurls.pl/uslugi/strzyzenie-na-sucho/#service",
+                "name": "Strzyżenie włosów kręconych na sucho",
+                "serviceType": "Strzyżenie włosów kręconych",
+                "description": "Specjalistyczne strzyżenie loków metodą cięcia na sucho, dopasowane do naturalnego skrętu, kształtu i objętości fryzury.",
+                "provider": {
+                  "@id": "https://happycurls.pl/#business"
+                },
+                "areaServed": ["Warszawa", "Poznań", "Wrocław"]
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://happycurls.pl/uslugi/pielęgnacja-i-stylizacja/",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://happycurls.pl/uslugi/pielęgnacja-i-stylizacja/#service",
+                "name": "Pielęgnacja i stylizacja włosów kręconych",
+                "serviceType": "Pielęgnacja włosów kręconych",
+                "description": "Profesjonalna pielęgnacja, regeneracja i stylizacja włosów kręconych oraz falowanych wraz z konsultacją i nauką domowej rutyny.",
+                "provider": {
+                  "@id": "https://happycurls.pl/#business"
+                },
+                "areaServed": ["Warszawa", "Poznań", "Wrocław"]
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://happycurls.pl/uslugi/kompleks-męski/",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://happycurls.pl/uslugi/kompleks-męski/#service",
+                "name": "Męskie strzyżenie włosów kręconych",
+                "serviceType": "Męskie strzyżenie włosów kręconych",
+                "description": "Specjalistyczne strzyżenie męskich włosów kręconych, dopasowane do tekstury, rysów twarzy i indywidualnego stylu.",
+                "provider": {
+                  "@id": "https://happycurls.pl/#business"
+                },
+                "areaServed": ["Warszawa", "Poznań", "Wrocław"]
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://happycurls.pl/uslugi/fryzjer-dla-dzieci-loki/",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://happycurls.pl/uslugi/fryzjer-dla-dzieci-loki/#service",
+                "name": "Strzyżenie włosów kręconych dla dzieci",
+                "serviceType": "Dziecięce strzyżenie włosów kręconych",
+                "description": "Bezstresowe strzyżenie i pielęgnacja dziecięcych loków oraz instruktaż dla rodziców dotyczący codziennego czesania i pielęgnacji.",
+                "provider": {
+                  "@id": "https://happycurls.pl/#business"
+                },
+                "areaServed": ["Warszawa", "Poznań", "Wrocław"]
+              }
+            }
+          ]
+        }
+      ]
+    }
     </script>
 
     <link
@@ -251,7 +349,7 @@
             <button class="header__submenu-toggle" type="button" onclick="window.location.href='./';">
                 Usługi
                 <span class="header__submenu-arrow">
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <svg width="24" height="24" viewBox="0 0 12 8" fill="none">
                     <path
                     d="M1 1.5L6 6.5L11 1.5"
                     stroke="currentColor"
@@ -290,7 +388,7 @@
             <button class="header__submenu-toggle" type="button">
                 Salony
                 <span class="header__submenu-arrow">
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <svg width="24" height="24" viewBox="0 0 12 8" fill="none">
                     <path
                     d="M1 1.5L6 6.5L11 1.5"
                     stroke="currentColor"
@@ -345,15 +443,21 @@
             <h1 class="hero__title">
               Profesjonalne usługi dla włosów kręconych i falowanych – Happy Curls
             </h1>
-            <p class="hero__text">
-              Specjalizujemy się w strzyżeniu, pielęgnacji i stylizacji włosów kręconych oraz falowanych.<br>
-Pracujemy techniką cięcia na sucho, która pozwala wydobyć naturalny skręt, lekkość i objętość fryzury.<br>
-Oferujemy usługi dla kobiet, mężczyzn i dzieci — z indywidualnym podejściem do każdego rodzaju loków i fal.
-            </p>
+            <div class="mobile-wrapper">
+              <a href="#form" class="btn js-anchor">
+                Zarezerwuj termin
+              </a>
+              <p class="hero__text">
+                Specjalizujemy się w strzyżeniu, pielęgnacji i stylizacji włosów kręconych oraz falowanych.<br>
+  Pracujemy techniką cięcia na sucho, która pozwala wydobyć naturalny skręt, lekkość i objętość fryzury.<br>
+  Oferujemy usługi dla kobiet, mężczyzn i dzieci — z indywidualnym podejściem do każdego rodzaju loków i fal.
+              </p>
+            </div>
         </div>
         <img src="../images/why-line.png" alt="" class="stripe-01">
         <img src="../images/why-line.png" alt="" class="stripe-02">
         <img src="../images/uslugi/faces.webp" alt="funny faces image" class="faces">
+        <img src="../images/uslugi/faces-mobile.webp" alt="funny faces image" class="faces mobile">
       </section>
 
       <section class="services-list" aria-label="Lista usług HappyCurls">
@@ -364,6 +468,10 @@ Oferujemy usługi dla kobiet, mężczyzn i dzieci — z indywidualnym podejście
               <h2 class="service-card__title">
                 Strzyżenie loków damskie metodą cięcia na sucho
               </h2>
+
+              <figure class="service-card__media mobile">
+                <img src="../images/uslugi/na_sucho.webp" alt="Strzyżenie na sucho włosów kręconych w HappyCurls" loading="lazy">
+              </figure>
 
               <p class="service-card__text">
                 To nasza główna specjalizacja — zaufało nam już ponad 14 000 kobiet z całej Polski.<br>
@@ -391,6 +499,10 @@ Strzyżenie metodą cięcia na sucho pozwala dopasować formę fryzury do natura
                 Rytuały pielęgnacyjne i stylizacja Twoich włosów
               </h2>
 
+              <figure class="service-card__media mobile">
+                <img src="../images/uslugi/rytualy.webp" alt="Pielęgnacja i regeneracja włosów kręconych w HappyCurls" loading="lazy">
+              </figure>
+
               <p class="service-card__text">
                 Szczegółowa konsultacja i nauka domowej rutyny. Idealne rozwiązanie, aby poznać ukryty potencjał swoich włosów lub przygotować się na wyjątkową okazję.
               </p>
@@ -411,6 +523,10 @@ Strzyżenie metodą cięcia na sucho pozwala dopasować formę fryzury do natura
                 Męski kompleks dla włosów kręconych
               </h2>
 
+              <figure class="service-card__media mobile">
+                <img src="../images/uslugi/meski.webp" alt="Męskie strzyżenie włosów kręconych w HappyCurls" loading="lazy">
+              </figure>
+
               <p class="service-card__text">
                 Specjalistyczne strzyżenie uwzględniające męską estetykę oraz unikalne rysy twarzy. Dwuetapowa metoda pracy z teksturą zapewnia nowoczesny wygląd i podkreśla Twój charakter i styl.
               </p>
@@ -425,7 +541,7 @@ Strzyżenie metodą cięcia na sucho pozwala dopasować formę fryzury do natura
             </figure>
           </article>
 
-          <article class="service-card">
+          <article class="service-card children">
             <div class="service-card__content">
               <h2 class="service-card__title">
                 Strzyżenie i pielęgnacja loków dziecięcych
