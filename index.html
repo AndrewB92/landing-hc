@@ -38,114 +38,317 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "HairSalon",
-      "@id": "https://happycurls.pl/#business",
-      "name": "HappyCurls",
-      "url": "https://happycurls.pl/",
-      "logo": "https://happycurls.pl/images/logo.svg",
-      "image": "https://happycurls.pl/images/logo.svg",
-      "telephone": "+48690401977",
-      "priceRange": "$$",
-      "slogan": "Kręcone włosy są inne",
-      "description": "HappyCurls to salon fryzjerski specjalizujący się w pielęgnacji, stylizacji i strzyżeniu włosów kręconych oraz falowanych.",
-      "areaServed": [
-        { "@type": "City", "name": "Warszawa" },
-        { "@type": "City", "name": "Poznań" },
-        { "@type": "City", "name": "Wrocław" }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/happycurls.polska/",
-        "https://www.instagram.com/happycurls_polska/",
-        "https://www.tiktok.com/@happycurls_polska/"
-      ],
-      "knowsAbout": [
-        "włosy kręcone",
-        "włosy falowane",
-        "afroloki",
-        "strzyżenie na sucho",
-        "naturalna stylizacja loków",
-        "pielęgnacja włosów kręconych",
-        "koloryzacja"
-      ],
-      "department": [
+      "@graph": [
         {
-          "@type": "HairSalon",
-          "name": "HappyCurls Poznań",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Pl. Władysława Andersa 3",
-            "postalCode": "61-894",
-            "addressLocality": "Poznań",
-            "addressCountry": "PL"
+          "@type": "Organization",
+          "@id": "https://happycurls.pl/#organization",
+          "name": "HappyCurls",
+          "url": "https://happycurls.pl/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://happycurls.pl/#logo",
+            "url": "https://happycurls.pl/images/logo.svg"
           },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 52.40114168683415,
-            "longitude": 16.925994771164447
+          "image": "https://happycurls.pl/images/h1.jpg",
+          "email": "happycurls.polska@gmail.com",
+          "telephone": "+48690401977",
+          "sameAs": [
+            "https://www.facebook.com/happycurls.polska/",
+            "https://www.instagram.com/happycurls_polska/",
+            "https://www.tiktok.com/@happycurls_polska/"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+48690401977",
+            "email": "happycurls.polska@gmail.com",
+            "contactType": "customer service",
+            "areaServed": "PL",
+            "availableLanguage": ["pl-PL"]
           }
         },
         {
           "@type": "HairSalon",
-          "name": "HappyCurls Wrocław",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Tadeusza Kościuszki 80",
-            "postalCode": "50-441",
-            "addressLocality": "Wrocław",
-            "addressCountry": "PL"
+          "@id": "https://happycurls.pl/#business",
+          "name": "HappyCurls",
+          "url": "https://happycurls.pl/",
+          "parentOrganization": {
+            "@id": "https://happycurls.pl/#organization"
           },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.1013881254055,
-            "longitude": 17.040806354693903
+          "logo": {
+            "@id": "https://happycurls.pl/#logo"
+          },
+          "image": [
+            "https://happycurls.pl/images/h1.jpg",
+            "https://happycurls.pl/images/h1.png",
+            "https://happycurls.pl/images/test-vid-bg.png"
+          ],
+          "telephone": "+48690401977",
+          "email": "happycurls.polska@gmail.com",
+          "priceRange": "$$",
+          "slogan": "Kręcone włosy są inne",
+          "description": "HappyCurls to specjalistyczna sieć salonów fryzjerskich w Polsce dla włosów kręconych, falowanych i afroloków. Salony oferują strzyżenie na sucho, pielęgnację, stylizację i koloryzację włosów kręconych.",
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Warszawa"
+            },
+            {
+              "@type": "City",
+              "name": "Poznań"
+            },
+            {
+              "@type": "City",
+              "name": "Wrocław"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/happycurls.polska/",
+            "https://www.instagram.com/happycurls_polska/",
+            "https://www.tiktok.com/@happycurls_polska/"
+          ],
+          "knowsAbout": [
+            "włosy kręcone",
+            "włosy falowane",
+            "afroloki",
+            "strzyżenie na sucho",
+            "naturalna stylizacja loków",
+            "pielęgnacja włosów kręconych",
+            "koloryzacja włosów kręconych",
+            "fryzjer do loków"
+          ],
+          "potentialAction": {
+            "@type": "ReserveAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://happycurls.pl/#form"
+            },
+            "result": {
+              "@type": "Reservation",
+              "name": "Umów wizytę w HappyCurls"
+            }
+          },
+          "department": [
+            {
+              "@type": "HairSalon",
+              "@id": "https://happycurls.pl/warszawa/#business",
+              "name": "HappyCurls Warszawa",
+              "url": "https://happycurls.pl/warszawa/",
+              "telephone": "+48690401977",
+              "priceRange": "$$",
+              "image": "https://happycurls.pl/images/warszawa.webp",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "ul. Wspólna 75",
+                "addressLocality": "Warszawa",
+                "addressCountry": "PL"
+              }
+            },
+            {
+              "@type": "HairSalon",
+              "@id": "https://happycurls.pl/poznan/#business",
+              "name": "HappyCurls Poznań",
+              "url": "https://happycurls.pl/poznan/",
+              "telephone": "+48690401977",
+              "priceRange": "$$",
+              "image": "https://happycurls.pl/images/poznan.webp",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Pl. Władysława Andersa 3",
+                "postalCode": "61-894",
+                "addressLocality": "Poznań",
+                "addressCountry": "PL"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 52.40114168683415,
+                "longitude": 16.925994771164447
+              }
+            },
+            {
+              "@type": "HairSalon",
+              "@id": "https://happycurls.pl/wroclaw/#business",
+              "name": "HappyCurls Wrocław",
+              "url": "https://happycurls.pl/wroclaw/",
+              "telephone": "+48690401977",
+              "priceRange": "$$",
+              "image": "https://happycurls.pl/images/wroclaw.webp",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "ul. Tadeusza Kościuszki 80",
+                "postalCode": "50-441",
+                "addressLocality": "Wrocław",
+                "addressCountry": "PL"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 51.1013881254055,
+                "longitude": 17.040806354693903
+              }
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Usługi HappyCurls",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "url": "https://happycurls.pl/uslugi/strzyzenie-na-sucho/",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pełny Kompleks",
+                  "description": "Strzyżenie na sucho, mycie, pielęgnacja i stylizacja włosów kręconych."
+                }
+              },
+              {
+                "@type": "Offer",
+                "url": "https://happycurls.pl/uslugi/strzyzenie-na-sucho/",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Express Strzyżenie",
+                  "description": "Strzyżenie na sucho i reanimacja skrętu dla stałych klientów."
+                }
+              },
+              {
+                "@type": "Offer",
+                "url": "https://happycurls.pl/uslugi/pielęgnacja-i-stylizacja/",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pielęgnacja i stylizacja",
+                  "description": "Pielęgnacja i naturalna stylizacja włosów falowanych oraz kręconych."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Koloryzacja",
+                  "description": "Koloryzacja włosów kręconych."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pełny kompleks + koloryzacja",
+                  "description": "Strzyżenie, pielęgnacja, stylizacja i koloryzacja włosów kręconych."
+                }
+              }
+            ]
           }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://happycurls.pl/#website",
+          "url": "https://happycurls.pl/",
+          "name": "HappyCurls",
+          "publisher": {
+            "@id": "https://happycurls.pl/#organization"
+          },
+          "inLanguage": "pl-PL"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://happycurls.pl/#webpage",
+          "url": "https://happycurls.pl/",
+          "name": "HappyCurls - Najlepszy fryzjer do włosów kręconych. Poznaj cięcie na sucho!",
+          "description": "Specjalistyczny fryzjer do kręconych włosów. Oferujemy profesjonalne strzyżenie na sucho i pielęgnację loków w Warszawie, Poznaniu i Wrocławiu. Sprawdź efekty!",
+          "isPartOf": {
+            "@id": "https://happycurls.pl/#website"
+          },
+          "about": {
+            "@id": "https://happycurls.pl/#business"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://happycurls.pl/images/h1.jpg"
+          },
+          "mainEntity": [
+            {
+              "@id": "https://happycurls.pl/#business"
+            },
+            {
+              "@id": "https://happycurls.pl/#hero-video"
+            },
+            {
+              "@id": "https://happycurls.pl/#faq"
+            }
+          ],
+          "potentialAction": {
+            "@type": "ReserveAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://happycurls.pl/#form"
+            },
+            "result": {
+              "@type": "Reservation",
+              "name": "Umów wizytę w HappyCurls"
+            }
+          },
+          "inLanguage": "pl-PL"
+        },
+        {
+          "@type": "VideoObject",
+          "@id": "https://happycurls.pl/#hero-video",
+          "name": "HappyCurls - specjalistyczna sieć salonów dla włosów kręconych i falowanych",
+          "description": "Film w sekcji hero przedstawiający HappyCurls jako specjalistyczną sieć salonów dla włosów kręconych i falowanych w Polsce.",
+          "thumbnailUrl": [
+            "https://happycurls.pl/images/test-vid-bg.png"
+          ],
+          "contentUrl": "https://happycurls.pl/videos/Main_BG-s_compress.mp4",
+          "encodingFormat": "video/mp4",
+          "uploadDate": "2026-06-04",
+          "publisher": {
+            "@id": "https://happycurls.pl/#organization"
+          },
+          "isPartOf": {
+            "@id": "https://happycurls.pl/#webpage"
+          },
+          "inLanguage": "pl-PL"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://happycurls.pl/#faq",
+          "url": "https://happycurls.pl/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Dlaczego właśnie strzyżenie na sucho?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Musimy widzieć typ i różnorodność skrętu, to, jak każde pasemko się układa. Efekt strzyżenia na mokro na lokach jest nieprzewidywalny. Strzyżenie na sucho eliminuje te problemy: fryzura będzie równa, dobrze się ułoży i pięknie odrośnie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy konsultacja w Happy Curls jest płatna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nie, profesjonalna konsultacja i analiza struktury włosa jest wliczona w cenę każdej usługi w naszej sieci salonów."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakich sprzętów używamy do stylizacji loków?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W Happy Curls stawiamy na naturalność. Nie używamy lokówek ani prostownic. Wszystkie efekty, które widzisz w galerii, to wynik pracy rąk i suszarki z dyfuzorem."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie usługi fryzjerskie oferujemy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oferujemy Pełny Kompleks, czyli strzyżenie na sucho, mycie, pielęgnację i stylizację, Express Strzyżenie dla stałych klientów, pielęgnację i stylizację oraz koloryzację włosów kręconych."
+              }
+            }
+          ],
+          "inLanguage": "pl-PL"
         }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Usługi HappyCurls",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Pełny Kompleks",
-              "description": "Strzyżenie na sucho, mycie, pielęgnacja i stylizacja."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Express Strzyżenie dla stałych klientów",
-              "description": "Strzyżenie na sucho i reanimacja skrętu."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Pielęgnacja i stylizacja"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Koloryzacja"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Pełny kompleks + koloryzacja"
-            }
-          }
-        ]
-      }
+      ]
     }
     </script>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
@@ -297,7 +500,7 @@
             <button class="header__submenu-toggle" type="button" onclick="window.location.href='uslugi/';">
                 Usługi
                 <span class="header__submenu-arrow">
-                <svg width="22" height="18" viewBox="0 0 12 8" fill="none">
+                <svg width="24" height="24" viewBox="0 0 12 8" fill="none">
                     <path
                     d="M1 1.5L6 6.5L11 1.5"
                     stroke="currentColor"
@@ -336,7 +539,7 @@
             <button class="header__submenu-toggle" type="button">
                 Salony
                 <span class="header__submenu-arrow">
-                <svg width="22" height="18" viewBox="0 0 12 8" fill="none">
+                <svg width="24" height="24" viewBox="0 0 12 8" fill="none">
                     <path
                     d="M1 1.5L6 6.5L11 1.5"
                     stroke="currentColor"
@@ -384,16 +587,6 @@
         </ul>
       </div>
     </div>
-
-    <!-- <div class="hero">
-      <div class="container">
-        <h1 class="hero__title">
-          Kręcone włosy są inne - Specjalistyczna sieć salonów dla loków i fal
-        </h1>
-        <div class="hero__descr">Profesjonalne strzyżenie na sucho i pielęgnacja włosów kręconych w Happy Curls. Twoje loki zasługują na ekspercką opiekę.</div>
-        <a href="#form" class="btn">Umów się na wizytę</a>
-      </div>
-    </div> -->
 
     <main>
       <section class="hero-video" aria-label="HappyCurls hero">

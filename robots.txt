@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://happycurls.pl/sitemap.xml
+Sitemap: https://happycurls.pl/sitemap-images.xml

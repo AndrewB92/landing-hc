@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 - Strona nie znaleziona | HappyCurls</title>
+
+    <meta name="description" content="Strona, której szukasz, nie istnieje lub została przeniesiona.">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="canonical" href="https://happycurls.pl/404.html">
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .error-page__content {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .error-page__logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 40px;
+        }
+
+        .error-page__logo img {
+            width: 60px;
+            height: auto;
+        }
+
+        .error-page__logo span {
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .error-page h1 {
+            margin: 0;
+            font-size: clamp(90px, 12vw, 180px);
+            line-height: 1;
+            color: #61C4EB;
+        }
+
+        .error-page h2 {
+            margin: 16px 0 24px;
+            font-size: clamp(28px, 4vw, 48px);
+            line-height: 1.2;
+        }
+
+        .error-page p {
+            max-width: 620px;
+            margin: 0 auto 32px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .error-page__actions {
+            margin-bottom: 40px;
+        }
+
+        .error-page__btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 240px;
+            padding: 18px 32px;
+            border-radius: 999px;
+            background: #61C4EB;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform .2s ease;
+        }
+
+        .error-page__btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .error-page__links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+        }
+
+        .error-page__links a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color .2s ease;
+        }
+
+        .error-page__links a:hover {
+            border-color: currentColor;
+        }
+
+        @media (max-width: 767px) {
+            .error-page {
+                padding: 30px 20px;
+            }
+
+            .error-page__logo img {
+                width: 48px;
+            }
+
+            .error-page p {
+                font-size: 16px;
+            }
+
+            .error-page__btn {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .error-page__links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="error-page">
+
+        <div class="error-page__content">
+
+            <a href="/" class="error-page__logo">
+                <img src="/images/logo.svg" alt="HappyCurls">
+                <span>HAPPY CURLS</span>
+            </a>
+
+            <h1>404</h1>
+
+            <h2>Ups... tej strony nie znaleziono</h2>
+
+            <p>
+                Strona, której szukasz, nie istnieje, została przeniesiona
+                lub adres został wpisany niepoprawnie.
+            </p>
+
+            <div class="error-page__actions">
+                <a href="/" class="error-page__btn">
+                    Wróć na stronę główną
+                </a>
+            </div>
+
+            <div class="error-page__links">
+                <a href="/uslugi/">Usługi</a>
+                <a href="/warszawa/">Warszawa</a>
+                <a href="/poznan/">Poznań</a>
+                <a href="/wroclaw/">Wrocław</a>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
